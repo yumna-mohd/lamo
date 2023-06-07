@@ -1,0 +1,854 @@
+﻿@font-face {
+  font-family: "La Macchina";
+  src: url("Fonts/La Macchina.ttf"); }
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #c4c4c4;
+  background-color: black;
+  font-family: "georgia pro" serif;
+  font-style: italic;
+  font-weight: 100;
+  overflow-x: hidden;
+  text-decoration: none;
+  scroll-behavior: smooth; }
+
+* {
+  box-sizing: border-box; }
+
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  padding: 2% 6%; }
+  @media screen and (min-width: 481px) and (max-width: 1024px) {
+    .header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center; } }
+  @media screen and (max-width: 480px) {
+    .header {
+      padding-top: 5%; } }
+  .header .mobile-div {
+    display: flex;
+    flex-direction: row;
+    width: 90%; }
+    @media screen and (min-width: 481px) and (max-width: 1024px) {
+      .header .mobile-div {
+        display: flex;
+        flex-direction: column; }
+        .header .mobile-div > div {
+          justify-content: center;
+          align-items: center;
+          text-align: center; } }
+    @media screen and (max-width: 480px) {
+      .header .mobile-div {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between; }
+        .header .mobile-div > div {
+          text-align: center; }
+          .header .mobile-div > div img {
+            width: 8vw; } }
+    .header .mobile-div .title {
+      display: flex;
+      flex-direction: row; }
+      @media screen and (min-width: 481px) and (max-width: 1024px) {
+        .header .mobile-div .title {
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          display: flex;
+          flex-direction: column; } }
+      @media screen and (max-width: 480px) {
+        .header .mobile-div .title {
+          display: flex;
+          flex-direction: row; } }
+      .header .mobile-div .title img {
+        width: 6vw; }
+        @media screen and (min-width: 481px) and (max-width: 1024px) {
+          .header .mobile-div .title img {
+            width: 8vw; } }
+      .header .mobile-div .title .nav-name h1 {
+        margin: 0;
+        font-family: "La Macchina", italic;
+        font-size: 4.2vw; }
+        @media screen and (max-width: 480px) {
+          .header .mobile-div .title .nav-name h1 {
+            font-size: 6.8vw; } }
+    .header .mobile-div .hamburger {
+      display: none; }
+      @media screen and (max-width: 480px) {
+        .header .mobile-div .hamburger {
+          display: block;
+          font-size: 5.8vw;
+          width: 10%; } }
+  .header .sub-nav {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    height: 10%;
+    justify-content: right;
+    margin-top: 1%; }
+    @media screen and (min-width: 481px) and (max-width: 1024px) {
+      .header .sub-nav {
+        justify-content: center;
+        align-items: center;
+        text-align: center; } }
+    @media screen and (max-width: 480px) {
+      .header .sub-nav {
+        display: none; } }
+    .header .sub-nav > div {
+      width: 15%;
+      margin: 0.329vw 1.317vw;
+      font-size: 1vw; }
+      @media screen and (min-width: 481px) and (max-width: 1024px) {
+        .header .sub-nav > div {
+          font-size: 1.5vw;
+          margin-top: 10px; } }
+      .header .sub-nav > div a {
+        text-decoration: none;
+        font-size: 1.5vw;
+        color: #c4c4c4;
+        -webkit-text-stroke: 0.4px green;
+        transition: font-size 0.3s; }
+      .header .sub-nav > div a:hover {
+        color: darkgreen;
+        font-size: 1.6vw; }
+    .header .sub-nav .nav-shop {
+      text-align: center; }
+      .header .sub-nav .nav-shop a {
+        border: 2px solid #c4c4c4;
+        border-radius: 20px;
+        font-weight: 100;
+        font-size: 1.3vw;
+        padding: 10px; }
+
+.bg-gif {
+  height: 40vw;
+  width: 100%;
+  margin-bottom: 4%;
+  background-image: url("Images/lamborghini gif2.gif");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.downward-arrow {
+  margin-top: 30vw;
+  font-size: 4vw;
+  font-weight: 100;
+  margin-left: 3%; }
+
+.choose-model-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2vw; }
+  @media screen and (max-width: 480px) {
+    .choose-model-head {
+      font-size: 4vw; } }
+
+.multi-button-container {
+  display: flex;
+  flex-direction: column; }
+  .multi-button-container .model-bg {
+    background: linear-gradient(180deg, black 6%, rgba(28, 60, 7, 0.899685) 27%, rgba(255, 255, 255, 0) 100%);
+    height: 25vw;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row; }
+    @media screen and (min-width: 481px) and (max-width: 1024px) {
+      .multi-button-container .model-bg {
+        display: flex;
+        flex-direction: column;
+        height: 60vw;
+        justify-content: center;
+        align-items: center;
+        text-align: center; } }
+    @media screen and (max-width: 480px) {
+      .multi-button-container .model-bg {
+        display: flex;
+        flex-direction: column;
+        height: 150vw; } }
+    .multi-button-container .model-bg .third-button {
+      border: 0.5px solid #c4c4c4;
+      border-radius: 2%; }
+      .multi-button-container .model-bg .third-button img {
+        width: 100%;
+        height: 100%;
+        filter: brightness(60%); }
+      @media screen and (min-width: 481px) and (max-width: 1024px) {
+        .multi-button-container .model-bg .third-button {
+          margin-top: 4vw;
+          width: 70%; } }
+    .multi-button-container .model-bg .two-buttons {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      width: 55%;
+      justify-content: left; }
+      @media screen and (min-width: 481px) and (max-width: 1024px) {
+        .multi-button-container .model-bg .two-buttons {
+          width: 65%; } }
+      @media screen and (max-width: 480px) {
+        .multi-button-container .model-bg .two-buttons {
+          display: flex;
+          flex-direction: column;
+          height: 93vw; } }
+      .multi-button-container .model-bg .two-buttons > div {
+        height: 16vw;
+        border: 0.5px solid #c4c4c4;
+        border-radius: 2%;
+        justify-content: center;
+        align-items: center;
+        text-align: center; }
+        @media screen and (max-width: 480px) {
+          .multi-button-container .model-bg .two-buttons > div {
+            height: 40vw;
+            margin-bottom: 5%; } }
+        .multi-button-container .model-bg .two-buttons > div img {
+          filter: brightness(70%);
+          width: 100%;
+          height: 100%; }
+        .multi-button-container .model-bg .two-buttons > div:first-child {
+          margin-right: 7.5%;
+          /* Remove the left margin of the first container */ }
+          @media screen and (max-width: 480px) {
+            .multi-button-container .model-bg .two-buttons > div:first-child {
+              margin: 0 0 12% 0; } }
+    .multi-button-container .model-bg .contain {
+      position: relative;
+      width: 23.371vw;
+      text-align: center;
+      color: white; }
+      @media screen and (min-width: 481px) and (max-width: 1024px) {
+        .multi-button-container .model-bg .contain {
+          width: 65vw;
+          height: 30vw; } }
+      @media screen and (max-width: 480px) {
+        .multi-button-container .model-bg .contain {
+          width: 65vw;
+          height: 40vw; } }
+      .multi-button-container .model-bg .contain button {
+        padding: 0.527vw;
+        width: 16.458vw;
+        height: 3.292vw;
+        margin: 2%;
+        margin-top: 0.658vw;
+        font-size: 1vw;
+        border: 2px solid white;
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        cursor: pointer;
+        transition: 0.3s ease-out; }
+        @media screen and (max-width: 480px) {
+          .multi-button-container .model-bg .contain button {
+            width: 30vw;
+            height: 6vw;
+            font-size: 3vw; } }
+        @media screen and (min-width: 481px) and (max-width: 1024px) {
+          .multi-button-container .model-bg .contain button {
+            font-size: 2vw; } }
+      .multi-button-container .model-bg .contain button:hover, .multi-button-container .model-bg .contain button:focus {
+        color: white;
+        outline: 0; }
+      .multi-button-container .model-bg .contain .effect {
+        border-color: #c4c4c4;
+        color: #ffffff;
+        box-shadow: 0 0 40px 40px color inset, 0 0 0 0 #c4c4c4;
+        -webkit-transition: all 150ms ease-in-out;
+        transition: all 150ms ease-in-out; }
+      .multi-button-container .model-bg .contain .effect:hover {
+        box-shadow: 0 0 10px 0 #c4c4c4 inset, 0 0 10px 4px #c4c4c4; }
+      .multi-button-container .model-bg .contain img {
+        display: block;
+        transition: transform 0.5s;
+        border-radius: 2%; }
+        @media screen and (min-width: 481px) and (max-width: 1024px) {
+          .multi-button-container .model-bg .contain img {
+            height: 100%; } }
+        @media screen and (max-width: 480px) {
+          .multi-button-container .model-bg .contain img {
+            height: 100%; } }
+      .multi-button-container .model-bg .contain div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        background-color: transparent; }
+        .multi-button-container .model-bg .contain div h2 {
+          margin-bottom: 0.658vw;
+          font-size: 3vw; }
+          @media screen and (min-width: 481px) and (max-width: 1024px) {
+            .multi-button-container .model-bg .contain div h2 {
+              font-size: 4vw; } }
+          @media screen and (max-width: 480px) {
+            .multi-button-container .model-bg .contain div h2 {
+              font-size: 5vw; } }
+    .multi-button-container .model-bg .contain:hover img {
+      transform: scale(1.1);
+      border: 2px solid #c4c4c4;
+      filter: brightness(90%); }
+    .multi-button-container .model-bg .contain:hover div {
+      opacity: 1;
+      transition: ease-in 0.3s; }
+
+.text {
+  display: none;
+  width: 100%; }
+
+.show {
+  display: block; }
+
+.hidden-content {
+  display: none; }
+
+.show-content {
+  display: block; }
+
+.hidden-content-urus {
+  display: none; }
+
+.show-content-urus {
+  display: block; }
+
+.model-into {
+  width: 60%;
+  margin: auto;
+  margin-bottom: 2%;
+  text-align: center;
+  margin-top: 3%;
+  font-size: 1vw; }
+  @media screen and (min-width: 481px) and (max-width: 1024px) {
+    .model-into {
+      width: 80%;
+      text-align: left;
+      margin-top: 0; }
+      .model-into h2 {
+        text-align: center;
+        font-size: 3vw; }
+      .model-into h3 {
+        font-size: 1.8vw; } }
+  @media screen and (max-width: 480px) {
+    .model-into {
+      width: 80%;
+      text-align: left;
+      margin-top: 0; }
+      .model-into h2 {
+        text-align: center;
+        font-size: 4vw; }
+      .model-into h3 {
+        font-size: 2.6vw; } }
+
+.revuelto-bg {
+  background-image: url("Images/lambo rev.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vw;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+.drag_container {
+  position: relative;
+  width: 62vw;
+  height: 27vw;
+  overflow: hidden;
+  cursor: grab;
+  margin: 0 auto; }
+  @media screen and (min-width: 481px) and (max-width: 1024px) {
+    .drag_container {
+      height: 33vw; } }
+  @media screen and (max-width: 480px) {
+    .drag_container {
+      height: 52vw; } }
+  .drag_container .drag_slides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(6, 20vw);
+    grid-gap: 2vw;
+    pointer-events: none;
+    height: 27vw; }
+    @media screen and (min-width: 481px) and (max-width: 1024px) {
+      .drag_container .drag_slides {
+        grid-template-columns: repeat(6, 30vw);
+        height: 33vw; } }
+    @media screen and (max-width: 480px) {
+      .drag_container .drag_slides {
+        grid-template-columns: repeat(6, 50vw);
+        height: 52vw; } }
+    .drag_container .drag_slides .drag_slide {
+      border-radius: 10px;
+      width: 20vw; }
+      @media screen and (min-width: 481px) and (max-width: 1024px) {
+        .drag_container .drag_slides .drag_slide {
+          width: 30vw; } }
+      @media screen and (max-width: 480px) {
+        .drag_container .drag_slides .drag_slide {
+          width: 50vw; } }
+
+.drag-subhead {
+  border: 0.5px solid #c4c4c4;
+  border-radius: 5px;
+  width: 10vw;
+  padding: 0.658vw;
+  margin-top: 5vw; }
+  @media screen and (min-width: 481px) and (max-width: 1024px) {
+    .drag-subhead {
+      width: 14vw; } }
+  @media screen and (max-width: 480px) {
+    .drag-subhead {
+      width: 18vw; } }
+  .drag-subhead h3 {
+    margin: 0;
+    font-size: 1.5vw; }
+    @media screen and (min-width: 481px) and (max-width: 1024px) {
+      .drag-subhead h3 {
+        font-size: 2vw; } }
+    @media screen and (max-width: 480px) {
+      .drag-subhead h3 {
+        font-size: 3vw; } }
+
+.details-height {
+  margin-top: 1.317; }
+  .details-height h4 {
+    border: 0.5px solid #c4c4c4;
+    border-radius: 2px;
+    padding: 0.658vw;
+    font-size: 1vw; }
+  @media screen and (min-width: 481px) and (max-width: 1024px) {
+    .details-height h4 {
+      font-size: 1.5vw; } }
+  @media screen and (max-width: 480px) {
+    .details-height h4 {
+      font-size: 2.5vw; } }
+
+.gallery-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+  .gallery-head h2 {
+    margin: 4% 0 0 0; }
+    @media screen and (min-width: 481px) and (max-width: 1024px) {
+      .gallery-head h2 {
+        margin-top: 4vw;
+        font-size: 3vw; } }
+    @media screen and (max-width: 480px) {
+      .gallery-head h2 {
+        font-size: 4vw; } }
+  .gallery-head h3 {
+    margin: 1% 0 5% 0; }
+    @media screen and (min-width: 481px) and (max-width: 1024px) {
+      .gallery-head h3 {
+        font-size: 2vw; } }
+    @media screen and (max-width: 480px) {
+      .gallery-head h3 {
+        font-size: 3vw; } }
+
+.gallery-main {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: row; }
+  @media screen and (min-width: 481px) and (max-width: 1024px) {
+    .gallery-main {
+      display: flex;
+      flex-direction: column; } }
+  @media screen and (max-width: 480px) {
+    .gallery-main {
+      display: flex;
+      flex-direction: column; } }
+  .gallery-main .left-div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    padding: 0.329vw 0 0.329vw 0.329vw;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+    @media screen and (min-width: 481px) and (max-width: 1024px) {
+      .gallery-main .left-div {
+        width: 90%;
+        padding: 0; } }
+    @media screen and (max-width: 480px) {
+      .gallery-main .left-div {
+        width: 90%; } }
+    .gallery-main .left-div > div {
+      margin: 0.329vw 0.329vw;
+      height: 10vw; }
+      @media screen and (min-width: 481px) and (max-width: 1024px) {
+        .gallery-main .left-div > div {
+          height: 25vw; } }
+      @media screen and (max-width: 480px) {
+        .gallery-main .left-div > div {
+          height: 25vw; } }
+      .gallery-main .left-div > div img {
+        width: 100%;
+        height: 100%; }
+    .gallery-main .left-div .left1 {
+      width: 72%;
+      border: 0.1px solid white; }
+    .gallery-main .left-div .left2 {
+      width: 23%;
+      border: 0.1px solid white; }
+    .gallery-main .left-div .left3 {
+      width: 23%;
+      border: 0.1px solid white; }
+    .gallery-main .left-div .left4 {
+      width: 72%;
+      border: 0.1px solid white; }
+  .gallery-main .second-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 42vw;
+    padding: 0.329vw 0.329vw 0.329vw 0px;
+    margin: 0; }
+    @media screen and (min-width: 481px) and (max-width: 1024px) {
+      .gallery-main .second-div {
+        width: 90%;
+        margin-left: 3vw; } }
+    @media screen and (max-width: 480px) {
+      .gallery-main .second-div {
+        width: 90%;
+        margin-left: 3vw; } }
+    .gallery-main .second-div img {
+      width: 100%;
+      height: 100%; }
+    .gallery-main .second-div .right-div {
+      display: flex;
+      flex-wrap: wrap;
+      width: 50%; }
+      .gallery-main .second-div .right-div > div {
+        margin: 0.329vw 0.329vw;
+        height: 10vw; }
+        @media screen and (min-width: 481px) and (max-width: 1024px) {
+          .gallery-main .second-div .right-div > div {
+            height: 25vw; } }
+        @media screen and (max-width: 480px) {
+          .gallery-main .second-div .right-div > div {
+            height: 25vw; } }
+      .gallery-main .second-div .right-div .right1 {
+        width: 92%;
+        border: 0.1px solid white; }
+      .gallery-main .second-div .right-div .right2 {
+        width: 45%;
+        border: 0.1px solid white; }
+      .gallery-main .second-div .right-div .right3 {
+        width: 45%;
+        border: 0.1px solid white; }
+    .gallery-main .second-div .middle-div-pad {
+      display: flex;
+      flex-wrap: wrap;
+      width: 50%; }
+      .gallery-main .second-div .middle-div-pad .middle-div {
+        margin: 0.329vw 0.329vw;
+        height: 21vw;
+        width: 100%;
+        border: 0.1px solid white; }
+        @media screen and (min-width: 481px) and (max-width: 1024px) {
+          .gallery-main .second-div .middle-div-pad .middle-div {
+            height: 50vw; } }
+        @media screen and (max-width: 480px) {
+          .gallery-main .second-div .middle-div-pad .middle-div {
+            height: 50vw; } }
+        .gallery-main .second-div .middle-div-pad .middle-div img {
+          width: 100%;
+          height: 100%; }
+
+.huracan-bg {
+  background-image: url("Images/huracan02.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vw;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+.choose-huracan-bg {
+  background: linear-gradient(180deg, black 0%, rgba(95, 93, 98, 0.71201) 50%, black 100%); }
+
+.choose-huracan-head {
+  font-size: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+  @media screen and (max-width: 480px) {
+    .choose-huracan-head {
+      font-size: 4vw; } }
+
+.huracan-buttons {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+  @media screen and (max-width: 480px) {
+    .huracan-buttons {
+      display: flex;
+      flex-direction: column; } }
+  .huracan-buttons button {
+    width: 15vw;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 4% 4%;
+    margin: 0.132vw 0.329vw 1.317vw 0.329vw;
+    font-size: 1vw;
+    border: 0.5px solid white;
+    border-radius: 5px; }
+    @media screen and (min-width: 481px) and (max-width: 1024px) {
+      .huracan-buttons button {
+        width: 20vw;
+        font-size: 1.5vw; } }
+    @media screen and (max-width: 480px) {
+      .huracan-buttons button {
+        width: 45vw;
+        font-size: 2.5vw; } }
+  .huracan-buttons button:hover, .huracan-buttons button:focus {
+    color: white;
+    outline: 0; }
+  .huracan-buttons .effect {
+    border-color: #c4c4c4;
+    color: #ffffff;
+    box-shadow: 0 0 40px 40px color inset, 0 0 0 0 #c4c4c4;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out; }
+  .huracan-buttons .effect:hover {
+    box-shadow: 0 0 10px 0 #c4c4c4 inset, 0 0 10px 4px #c4c4c4; }
+
+.huracan-sto-bg {
+  background-image: url("Images/huracan stoo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vw;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+.huracan-sto-head {
+  text-align: center;
+  padding: 6px;
+  width: 30vw;
+  border: 0px solid white;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: 0.3s ease-out;
+  margin: auto; }
+  .huracan-sto-head h2 {
+    font-size: 4vw;
+    color: #c4c4c4;
+    margin: 0; }
+
+.main-specs-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-align: left;
+  width: 100%; }
+  @media screen and (min-width: 481px) and (max-width: 1024px) {
+    .main-specs-container {
+      display: flex;
+      flex-direction: column; } }
+  @media screen and (max-width: 480px) {
+    .main-specs-container {
+      display: flex;
+      flex-direction: column; } }
+  .main-specs-container .sub-specs-container {
+    display: flex;
+    flex-direction: row;
+    width: 40%; }
+    @media screen and (min-width: 481px) and (max-width: 1024px) {
+      .main-specs-container .sub-specs-container {
+        width: 70%; } }
+    @media screen and (max-width: 480px) {
+      .main-specs-container .sub-specs-container {
+        display: flex;
+        flex-direction: column;
+        width: 80%; } }
+    .main-specs-container .sub-specs-container .spec-container {
+      width: 45%;
+      margin: 2.5%; }
+      @media screen and (max-width: 480px) {
+        .main-specs-container .sub-specs-container .spec-container {
+          width: 100%; } }
+      .main-specs-container .sub-specs-container .spec-container .specs-height {
+        border: 0.5px solid #c4c4c4;
+        border-radius: 2px;
+        height: 22vw;
+        margin-top: 1.317vw;
+        padding: 0.658vw; }
+        @media screen and (max-width: 480px) {
+          .main-specs-container .sub-specs-container .spec-container .specs-height {
+            height: 28vw; } }
+        .main-specs-container .sub-specs-container .spec-container .specs-height h4 {
+          font-size: 1vw; }
+          @media screen and (min-width: 481px) and (max-width: 1024px) {
+            .main-specs-container .sub-specs-container .spec-container .specs-height h4 {
+              font-size: 1.5vw; } }
+          @media screen and (max-width: 480px) {
+            .main-specs-container .sub-specs-container .spec-container .specs-height h4 {
+              font-size: 2.5vw; } }
+
+.huracan-sterrato-bg {
+  background-image: url("Images/huracan sterrato.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vw;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+.huracan-tecnica-bg {
+  background-image: url("Images/Huracan-Tecnica/huracan tecnica.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vw;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+.urus-bg {
+  background-image: url("Images/Urus-s/urus bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vw;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+.urus-s-bg {
+  background-image: url("Images/Urus-s/urus s bgg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vw;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+.urus-performante-bg {
+  background-image: url("Images/Urus-performante/performantee.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vw;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+.revuelto-gradient-top {
+  background: linear-gradient(180deg, #bd5f22 0%, rgba(255, 255, 255, 0) 100%); }
+
+.revuelto-gradient-bottom {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #bd5f22 100%); }
+
+.hurican-sto-gradient-top {
+  background: linear-gradient(180deg, #0d5c7d 0%, rgba(255, 255, 255, 0) 100%); }
+
+.hurican-sto-gradient-bottom {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #0d5c7d 100%); }
+
+.hurican-sterrota-gradient-top {
+  background: linear-gradient(180deg, rgba(179, 159, 88, 0.602766) 0%, transparent 100%); }
+
+.hurican-sterrota-gradient-bottom {
+  background: linear-gradient(180deg, transparent 0%, rgba(179, 159, 88, 0.602766) 100%); }
+
+.hurican-tecnica-gradient-top {
+  background: linear-gradient(180deg, rgba(1, 129, 9, 0.532738) 0%, rgba(173, 248, 178, 0) 100%); }
+
+.hurican-tecnica-gradient-bottom {
+  background: linear-gradient(180deg, rgba(173, 248, 178, 0) 0%, rgba(1, 129, 9, 0.532738) 100%); }
+
+.urus-s-gradient-bottom {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #555555 100%); }
+
+.urus-s-gradient-top {
+  background: linear-gradient(180deg, #555555 0%, rgba(255, 255, 255, 0) 100%); }
+
+.urus-performante-gradient-top {
+  background: linear-gradient(180deg, rgba(193, 145, 1, 0.599965) 0%, transparent 100%); }
+
+.urus-performante-gradient-bottom {
+  background: linear-gradient(180deg, transparent 0%, rgba(193, 145, 1, 0.599965) 100%); }
+
+/*image popup*/
+.gallery img {
+  cursor: pointer; }
+
+.popup-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 999; }
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  font-size: 55px;
+  color: #ffffff;
+  cursor: pointer; }
+
+.popup-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90vw;
+  max-height: 90vh;
+  border: 2px solid #e0e0e0;
+  border-radius: 2px; }
+
+footer {
+  margin: 2% 0;
+  text-align: center;
+  font-size: 1vw; }
+  @media screen and (min-width: 481px) and (max-width: 1024px) {
+    footer {
+      font-size: 1.7vw; } }
+  @media screen and (max-width: 480px) {
+    footer {
+      font-size: 2vw; } }

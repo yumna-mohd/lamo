@@ -1,0 +1,582 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 " />
+
+    <!--page title-->
+    <title>Lamborghini</title>
+
+    <!--attaching external stylesheet-->
+    <link rel="stylesheet" href="lamborghini.css" />
+
+    <!--attaching fontawesome link for hamburger icon in the phone resolution-->
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7a049c3ac9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--header class that container all the navigation/title/icons stylings-->
+    <div class="header">
+        <!--mobile-div class display the title and hamburger icon side by side in phone resolutions-->
+        <div class="mobile-div">
+            <!--title class styles the title and icon along with displying in different directions based on the screen size-->
+            <div class="title">
+                <div><img src="Images/icons8-lamborghini-100 (2).png" /> </div>
+                <!--nav name add the font family to the title "lamborghini"-->
+                <div class="nav-name"><h1>Lamborghini</h1></div>
+            </div>
+            <!--hanburger class styles the bars icon-->
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+        </div>
+
+        <!--sub-nav class styles the navigations options-->
+        <div class="sub-nav">
+            <div class="nav-models"><a href="HtmlPage1.html">MODELS</a></div>
+            <div class="nav-gallery"><a href="https://www.lamborghini.com/en-en/museum">Museum</a></div>
+            <div class="nav-shop"><a href="https://www.lamborghini.com/en-en/store">SHOP</a></div>
+        </div>
+    </div>
+
+    <!--bg-gif add the background cover gif-->
+    <div class="bg-gif">
+        <!--adding hyperlink to the arrow to scroll to the two buttoms div-->
+        <a href="HtmlPage1.html#here">
+            <i class="fas fa-chevron-down downward-arrow" style="color: #ffffff;"></i>
+        </a>
+    </div>
+
+    <!--multi-bottom-cotainer contains the 3 car buttons and heading -->
+    <div class="multi-button-container">
+        <!--styling the h2 text-->
+        <div class="choose-huracan-head"><h2>CHOOSE A MODEL</h2></div>
+        <!--contains the 3 buttons-->
+        <div class="model-bg">
+            <!--the top arrow reaches here-->
+            <!--styling the first two buttons together-->
+            <div id="here" class="two-buttons">
+                <!--styling container 1-->
+                <div class="contain button1">
+                    <img src="Images/revuelto/rev1.jpg" />
+                    <div>
+                        <h2>Revuelto</h2>
+                        <button class="effect" onclick="toggleText(1)">Read More</button>
+                    </div>
+                </div>
+                <!--styling container 2-->
+                <div class="contain button2">
+                    <img src="Images/Huracan-Sto/huracan sto.jpg" />
+                    <div>
+                        <h2>Huracan</h2>
+                        <button class="effect" onclick="toggleText(2)">Read More</button>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <!--styling container 3-->
+                <div class="contain third-button">
+                    <img src="Images/Urus-performante/urus performante btn bgg.jpg" />
+                    <div>
+                        <h2>Urus</h2>
+                        <button class="effect" onclick="toggleText(3)">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--following is displayed when the revuelto button is clicked-->
+        <div id="text1" class="text">
+            <!--adding gradient color-->
+            <div class="revuelto-gradient-top">
+                <!--adding bg image and styling the following text-->
+                <div class="revuelto-bg">
+                    <div class="huracan-sto-head"><h2>Revuelto</h2></div>
+                </div>
+
+                <!--styling the into text-->
+                <div class="model-into">
+                    <h2>ABOUT</h2>
+                    <h3>The Revuelto is the beginning of a new era for Lamborghini, who has harnessed the power of hybridization technology to create the first HPEV (High Performance Electrified Vehicle). Responding to the need for sustainability and powerful performance, the Lamborghini Revuelto rewrites all paradigms and represents a technical masterpiece beyond anyone’s imagination. The iconic V12 engine finds a new life in this futuristic automotive masterwork that delivers unparalleled performance and driving emotions.</h3>
+                </div>
+                <!--draggable specs container-->
+                <div class="drag_container">
+                    <!--styles all the slides together-->
+                    <div class="drag_slides">
+                        <!--styles individual slide-->
+                        <div class="drag_slide">
+                            <!--styling the following text-->
+                            <div class="drag-subhead"><h3>Overview</h3></div>
+                            <!--styling the following text-->
+                            <div class="details-height">
+                                <h4>Lamborghini recently unveiled the Revuelto, their first HPEV (High Performance Electrified Vehicle) hybrid super sports car, just before their 60th anniversary. This groundbreaking vehicle sets new standards in performance, on-board technology, and driving pleasure. With a total power output of 1015 CV, the Revuelto combines the force of a state-of-the-art 12-cylinder internal combustion engine with three high-density electric motors and an innovative transversal dual clutch e-gearbox.</h4>
+                            </div>
+                        </div>
+                        <div class="drag_slide">
+                            <div class="drag-subhead"><h3>Exterior</h3></div>
+                            <div class="details-height">
+                                <h4>The Revuelto honors the Lamborghini tradition and ushers in a new era even in its exterior design. While the car’s silhouette follows the iconic single center line, the sharply sculpted lines and smooth negative radiuses create a high-tech shape that puts the Revuelto unmistakably in the new generation of Lamborghini supercars. The iconic V12 is celebrated by being on full display in the rear.</h4>
+                            </div>
+                        </div>
+                        <div class="drag_slide">
+                            <div class="drag-subhead"><h3>Interior</h3></div>
+                            <div class="details-height">
+                                <h4>The interior of the Revuelto brings the “Feel Like a Pilot” concept to its utmost expression: simple volumes, symmetry, and a driver-focused approach make the cockpit an empowering station for the driver. The futuristic environment creates a seamless connection between driver and machine, while exclusive hexagon-shaped elements fulfill the dual mission of evoking past models and highlighting brand-new functional features.</h4>
+                            </div>
+                        </div>
+                        <div class="drag_slide">
+                            <div class="drag-subhead"><h3>Centro Stile</h3></div>
+                            <div class="details-height">
+                                <h4>The Revuelto combines classic Lamborghini proportions with strong, sculpted lines that promise a new future. Explore a silhouette that embodies confidence, power, strength, and groundbreaking aerodynamics.</h4>
+                            </div>
+                        </div>
+                        <div class="drag_slide">
+                            <div class="drag-subhead"><h3>Connect</h3></div>
+                            <div class="details-height">
+                                <h4>The suite of connected technologies featured in the Revuelto takes the best of two worlds from the services already available for Urus and Huracán to bring driving engagement to a level never experienced before.</h4>
+                            </div>
+                        </div>
+                        <div class="drag_slide">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--gallery revolueto-->
+            <div class="gallery-head"><h2>GALLERY</h2></div>
+            <div class="gallery-head"><h3>REVUELTO</h3></div>
+            <div class="gallery-main revuelto-gradient-bottom">
+                <!--styling the left most gallery container containg 4 images-->
+                <div class="left-div gallery">
+                    <div class="left1"><img src="Images/revuelto/rev1.jpg" /></div>
+                    <div class="left2"><img src="Images/revuelto/rev2.jpg" /></div>
+                    <div class="left3"><img src="Images/revuelto/rev3.jpg" /></div>
+                    <div class="left4"><img src="Images/revuelto/revueltou.png" /></div>
+                </div>
+                <!--styling the middle and right most gallery-->
+                <div class="second-div gallery">
+                    <!--styling the middle image-->
+                    <div class="middle-div-pad">
+                        <div class="middle-div"><img src="Images/revuelto/rev05.png" /></div>
+                    </div>
+                    <!--styling the right most image-->
+                    <div class="right-div">
+                        <div class="right1"><img src="Images/revuelto/rev6.jpg" /></div>
+                        <div class="right2"><img src="Images/revuelto/rev7.jpg" /></div>
+                        <div class="right3"><img src="Images/revuelto/rev8.jpg" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--huracan section-->
+        <div id="text2" class="text">
+            <div class="huracan-bg">
+                <div class="huracan-sto-head"><h2>Huracan</h2></div>
+            </div>
+            <div>
+                <div class="choose-huracan-bg">
+                    <div class="choose-huracan-head"><h2>CHOOSE YOUR HURACAN</h2></div>
+                    <div class="huracan-buttons">
+                        <div><button class="btn effect" onclick="showContent(1)">HURACAN STO</button></div>
+                        <div><button class="btn effect" onclick="showContent(2)">HURACAN STERRATO</button></div>
+                        <div><button class="btn effect" onclick="showContent(3)">HURACAN TECNICA</button></div>
+
+                    </div>
+                </div>
+
+
+                <!--huracan st0-->
+
+                <div id="content1" class="hidden-content">
+                    <div class="huracan-sto-bg">
+                        <div class="huracan-sto-head"><h2>Huracan Sto</h2></div>
+                    </div>
+                    <!--working brands slider-->
+                    <div class="main-specs-container hurican-sto-gradient-top">
+                        <div class="sub-specs-container">
+                            <div class="spec-container">
+                                <div class="drag-subhead"><h3>Overview</h3></div>
+                                <div class="specs-height">
+                                    <h4>
+                                        A super-sports car created with a singular purpose, the Huracán STO delivers all the feel and technology of a genuine race car in a road-legal model.
+                                        Lamborghini’s years-long motorsport know-how, intensified by a winning heritage, is concentrated in the new Huracán STO. Its extreme aerodynamics, track-honed handling dynamics, lightweight contents and the highest-performing V10 engine to date come together.
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="spec-container">
+                                <div class="drag-subhead"><h3>Exterior</h3></div>
+                                <div class="specs-height">
+                                    <h4>
+                                        A lightweight approach and functional design combine to express pure performance. While its contours may be reminiscent of the Huracán Super Trofeo EVO, the Huracán STO features a completely revised shape that optimizes the vehicle’s aerodynamics, while employing carbon fiber in more than 75% of the body panels. In particular, the Cofango—a specially designed body component that incorporates the front hood and fenders—maximizes.
+
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-specs-container">
+                            <div class="spec-container">
+                                <div class="drag-subhead"><h3>interior</h3></div>
+                                <div class="specs-height">
+                                    <h4>The interior features the same track-minded approach, using lightweight, high-quality materials throughout—most notably carbon fiber. Featured in the door panels, interior details, seats and floor mats, this innovative and distinctive material offers a super-sports look that perfectly complements the car’s fine Alcantara® and Carbon Skin® finishes for added performance flair and functional style.</h4>
+                                </div>
+                            </div>
+                            <div class="spec-container">
+                                <div class="drag-subhead"><h3>Connect</h3></div>
+                                <div class="specs-height">
+                                    <h4>The exclusive and advanced suite of connected technologies are ready to raise driving engagement to a level never experienced before. Lamborghini Connect gives STO drivers peace of mind when they are not at the wheel and always up to date functions on board while driving.</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--gallery huracan st0-->
+                    <div class="gallery-head"><h2>GALLERY</h2></div>
+                    <div class="gallery-head"><h3>HURACAN STO</h3></div>
+                    <div class="gallery-main hurican-sto-gradient-bottom">
+                        <div class="left-div gallery">
+                            <div class="left1"><img src="Images/Huracan-Sto/sto1.jpg" /></div>
+                            <div class="left2"><img src="Images/Huracan-Sto/sto2.jpg" /></div>
+                            <div class="left3"><img src="Images/Huracan-Sto/sto04.jpg" /></div>
+                            <div class="left4"><img src="Images/Huracan-Sto/sto5.jpg" /></div>
+                        </div>
+                        <div class="second-div gallery">
+                            <div class="middle-div-pad">
+                                <div class="middle-div"><img src="Images/Huracan-Sto/sto6.jpg" /></div>
+                            </div>
+                            <div class="right-div">
+                                <div class="right1"><img src="Images/Huracan-Sto/sto7.jpg" /></div>
+                                <div class="right2"><img src="Images/Huracan-Sto/sto8.jpeg" /></div>
+                                <div class="right3"><img src="Images/Huracan-Sto/sto1.jpg" /></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!--hurracan sterrato-->
+
+
+                <div id="content2" class="hidden-content">
+                    <div class="huracan-sterrato-bg">
+                        <div class="huracan-sto-head"><h2>Huracan Sterrato</h2></div>
+                    </div>
+                    <!--working brands slider-->
+                    <div class="main-specs-container hurican-sterrota-gradient-top">
+                        <div class="sub-specs-container">
+                            <div class="spec-container">
+                                <div class="drag-subhead"><h3>Overview</h3></div>
+                                <div class="specs-height">
+                                    <h4>
+                                        The first of its kind, the Huracán Sterrato explores a new frontier in driving pleasure, designed to push the envelope when the asphalt ends. The super sports car is equipped with a dedicated iteration of the LDVI (Lamborghini Integrated Vehicle Dynamics) system, featuring specific Strada and Sport calibrations and introducing Rally mode.
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="spec-container">
+                                <div class="drag-subhead"><h3>Exterior</h3></div>
+                                <div class="specs-height">
+                                    <h4>
+                                        The Huracán Sterrato has an adventurous spirit that mesmerizes the moment you set eyes on it.
+                                        Every detail is a statement of its daring attitude: it is 44 mm higher than the Huracán EVO to ensure greater suspension travel, and the track width has also been increased. The iconic air intake on the rear hood accentuates the car’s sporty, audacious character.
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-specs-container">
+                            <div class="spec-container">
+                                <div class="drag-subhead"><h3>interior</h3></div>
+                                <div class="specs-height">
+                                    <h4>The Huracán Sterrato interior reflects the “feel like a pilot” philosophy adopted for every Huracán model. The titanium rear arch, four-point safety harness, carbon bi-shell sports seats and aluminum floor mats invite the driver into a space made for adventure. The driver has full control of functions from behind the wheel, with displays inside the vehicle offering intuitive access to information.</h4>
+                                </div>
+                            </div>
+                            <div class="spec-container">
+                                <div class="drag-subhead"><h3>Connect</h3></div>
+                                <div class="specs-height">
+                                    <h4>Lamborghini Connect provides Huracán Sterrato pilots with a system that monitors multiple functions, even remotely (speed and movement perimeter management). The new super sports car opens up unexplored paths of connectivity and technology to further enhance the driving experience. </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--gallery sterrota-->
+                    <div class="gallery-head"><h2>GALLERY</h2></div>
+                    <div class="gallery-head"><h3>HURACAN STO</h3></div>
+                    <div class="gallery-main hurican-sterrota-gradient-bottom">
+                        <div class="left-div gallery">
+                            <div class="left1"><img src="Images/Huracan-Sterrato/sterrato1.jpg" /></div>
+                            <div class="left2"><img src="Images/Huracan-Sterrato/sterrato2.jpg" /></div>
+                            <div class="left3"><img src="Images/Huracan-Sterrato/sterrato3.jpg" /></div>
+                            <div class="left4"><img src="Images/Huracan-Sterrato/sterrato4.jpg" /></div>
+                        </div>
+                        <div class="second-div gallery">
+                            <div class="middle-div-pad">
+                                <div class="middle-div"><img src="Images/Huracan-Sterrato/sterrato5.jpg" /></div>
+                            </div>
+                            <div class="right-div">
+                                <div class="right1"><img src="Images/Huracan-Sterrato/sterrato6.jpeg" /></div>
+                                <div class="right2"><img src="Images/Huracan-Sterrato/sterrato7.jpeg" /></div>
+                                <div class="right3"><img src="Images/Huracan-Sterrato/sterrato8.jpg" /></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!--hurracan Tecnica-->
+
+
+                <div id="content3" class="hidden-content">
+                    <div class="huracan-tecnica-bg">
+                        <div class="huracan-sto-head"><h2>Huracan Tecnica</h2></div>
+                    </div>
+                    <!--working brands slider-->
+                    <div class="main-specs-container hurican-tecnica-gradient-top">
+                        <div class="sub-specs-container">
+                            <div class="spec-container">
+                                <div class="drag-subhead"><h3>Overview</h3></div>
+                                <div class="specs-height">
+                                    <h4>
+                                        The latest member of the Huracán range provides the purest Lamborghini driving experience combined with the freedom of everyday use: a bridge between past and future, lifestyle and performance, road and track. Huracán Tecnica brings forth a pilot’s attitude in every driver.
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="spec-container">
+                                <div class="drag-subhead"><h3>Exterior</h3></div>
+                                <div class="specs-height">
+                                    <h4>
+                                        Huracán Tecnica was designed as a bridge between worlds to combine performance and beauty. The lines emphasize distinctive new expressions inspired by the racing DNA of the Huracán Super Trofeo EVO2. The front and rear architectures were restructured with sharper lines to improve aerodynamics, bringing about stability and ease in every condition, especially on the track.
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-specs-container">
+                            <div class="spec-container">
+                                <div class="drag-subhead"><h3>interior</h3></div>
+                                <div class="specs-height">
+                                    <h4>Made for the driver. The versatility that distinguishes Huracán Tecnica is also a main feature of its interior, with extensive personalization options geared toward providing the most fulfilling driving experience. Exclusive interior finishes made of top-quality materials reflect Lamborghini’s Italian design heritage and include a new dedicated trim for the sports seats.</h4>
+                                </div>
+                            </div>
+                            <div class="spec-container">
+                                <div class="drag-subhead"><h3>Connect</h3></div>
+                                <div class="specs-height">
+                                    <h4>
+                                        The exclusive and advanced suite of connected technologies is ready to raise driving engagement to a level never experienced before. Lamborghini Connect gives Huracán Tecnica drivers peace of mind when they are not at the wheel and provides always-up-to-date functions on board.
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--gallery huracan tecnica-->
+                    <div class="gallery-head"><h2>GALLERY</h2></div>
+                    <div class="gallery-head"><h3>HURACAN STO</h3></div>
+                    <div class="gallery-main hurican-tecnica-gradient-bottom">
+                        <div class="left-div gallery">
+                            <div class="left1"><img src="Images/Huracan-Tecnica/Tecnica1.jpg" /></div>
+                            <div class="left2"><img src="Images/Huracan-Tecnica/Tecnica2.jpg" /></div>
+                            <div class="left3"><img src="Images/Huracan-Tecnica/Tecnica3.jpg" /></div>
+                            <div class="left4"><img src="Images/Huracan-Tecnica/Tecnica4.jpg" /></div>
+                        </div>
+                        <div class="second-div gallery">
+                            <div class="middle-div-pad">
+                                <div class="middle-div"><img src="Images/Huracan-Tecnica/Tecnica5.jpg" /></div>
+                            </div>
+                            <div class="right-div">
+                                <div class="right1"><img src="Images/Huracan-Tecnica/Tecnica6.jpg" /></div>
+                                <div class="right2"><img src="Images/Huracan-Tecnica/Tecnica7.jpg" /></div>
+                                <div class="right3"><img src="Images/Huracan-Tecnica/Tecnica8.jpg" /></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!--Urus section-->
+
+        <div id="text3" class="text">
+            <div class="urus-bg">
+                <div class="huracan-sto-head"><h2>Urus</h2></div>
+            </div>
+            <div>
+                <div class="choose-huracan-bg">
+                    <div class="choose-huracan-head"><h2>CHOOSE YOUR URUS</h2></div>
+
+                    <div class="huracan-buttons">
+                        <div><button class="btn effect" onclick="showContentUrus(1)">URUS S</button></div>
+                        <div><button class="btn effect" onclick="showContentUrus(2)">URUS PERFORMANTE</button></div>
+                    </div>
+                </div>
+
+
+                <!--urus s-->
+
+                <div id="content-urus1" class="hidden-content-urus">
+                    <div class="urus-s-bg">
+                        <div class="huracan-sto-head"><h2>Urus S</h2></div>
+                    </div>
+                    <!--working brands slider-->
+                    <div class="main-specs-container urus-s-gradient-top">
+                        <div class="sub-specs-container">
+                            <div class="spec-container">
+                                <div class="drag-subhead"><h3>Overview</h3></div>
+                                <div class="specs-height">
+                                    <h4>
+                                        The Urus embodies a visionary concept through the realization of a Super Sport Utility Vehicle born from pure Lamborghini DNA. In the Lamborghini Urus S, performance, design and exclusivity are evolved, revealing even greater strength and a heightened perception of luxury.
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="spec-container">
+                                <div class="drag-subhead"><h3>Exterior</h3></div>
+                                <div class="specs-height">
+                                    <h4>The design of the Urus S retains the muscular surfaces and confident lines of the Urus but with even greater sculptural definition to its shape. Both the front and rear bumpers present a more emphatic design, along with the new wheel arches and a carbon fiber painted hood. Fine details include a fresh treatment to the 23” and 22”-inch wheels and a front steel skid plate that together add a bold and elegant stance to the exterior. </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-specs-container">
+                            <div class="spec-container">
+                                <div class="drag-subhead"><h3>Interior</h3></div>
+                                <div class="specs-height">
+                                    <h4>
+                                        The interior of the Urus S expresses contemporary sophistication through its design, offering luxurious comfort with leather surfaces, trim elements in a variety of finishes and comprehensive high-tech Lamborghini equipment. In addition, the broad range of Ad Personam options allows you to appoint this super SUV to reflect your own personal sense of style
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="spec-container">
+                                <div class="drag-subhead"><h3>Connect</h3></div>
+                                <div class="specs-height">
+                                    <h4>
+                                        Its state-of-the-art navigation, comfort, safety and entertainment features are the elements of both onboard and remote connectivity that make driving your Urus S an unparalleled experience
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--gallery urus s-->
+                    <div class="gallery-head"><h2>GALLERY</h2></div>
+                    <div class="gallery-head"><h3>HURACAN STO</h3></div>
+                    <div class="gallery-main urus-s-gradient-bottom">
+                        <div class="left-div gallery">
+                            <div class="left1"><img src="Images/Urus-s/uruSs1.jpg" /></div>
+                            <div class="left2"><img src="Images/Urus-s/uruSs2.jpg" /></div>
+                            <div class="left3"><img src="Images/Urus-s/uruSs3.jpg" /></div>
+                            <div class="left4"><img src="Images/Urus-s/uruSs4.jpg" /></div>
+                        </div>
+                        <div class="second-div gallery">
+                            <div class="middle-div-pad">
+                                <div class="middle-div"><img src="Images/Urus-s/uruSs5.jpg" /></div>
+                            </div>
+                            <div class="right-div">
+                                <div class="right1"><img src="Images/Urus-s/uruSs6.png" /></div>
+                                <div class="right2"><img src="Images/Urus-s/uruSs7.jpg" /></div>
+                                <div class="right3"><img src="Images/Urus-s/uruSs8.jpg" /></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!--urus performante-->
+
+
+                <div id="content-urus2" class="hidden-content-urus">
+                    <div class="urus-performante-bg">
+                        <div class="huracan-sto-head"><h2>Urus Performante</h2></div>
+                    </div>
+                    <!--working brands slider-->
+                    <div class="main-specs-container urus-performante-gradient-top">
+                        <div class="sub-specs-container">
+                            <div class="spec-container">
+                                <div class="drag-subhead"><h3>Overview</h3></div>
+                                <div class="specs-height">
+                                    <h4>
+                                        A visionary concept: Urus Performante is the sporty evolution of the first-ever Super Sport Utility Vehicle, one that defines a new segment as the absolute all-around super sports car.
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="spec-container">
+                                <div class="drag-subhead"><h3>Exterior</h3></div>
+                                <div class="specs-height">
+                                    <h4>
+                                        The design for the Urus Performante is Lamborghini’s fullest expression of the unyielding principle, “Form follows function.” The liberal use of lightweight carbon-fiber components allows for a significant weight reduction and is a principal characteristic of Urus Performante’s design: sporty, sleek and undeniably bold, with proportions that reflect those of a super sports car.
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-specs-container">
+                            <div class="spec-container">
+                                <div class="drag-subhead"><h3>Interior</h3></div>
+                                <div class="specs-height">
+                                    <h4>
+                                        The interior of Urus Performante is made for its driver, enhanced by the use of innovative and lightweight materials such as Alcantara and carbon fiber. With these, dark tones, contrast stitching and exclusive Performante logos add unique details to express the car’s sporting character.
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="spec-container">
+                                <div class="drag-subhead"><h3>Connect</h3></div>
+                                <div class="specs-height">
+                                    <h4>
+                                        The exclusive and advanced suite of connected technologies is ready to raise driving engagement to a level never experienced before. Lamborghini Connect gives Urus Performante drivers peace of mind when they are not at the wheel and provides always-up-to-date functions on board.
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--gallery urus performante-->
+                    <div class="gallery-head"><h2>GALLERY</h2></div>
+                    <div class="gallery-head"><h3>HURACAN STO</h3></div>
+                    <div class="gallery-main urus-performante-gradient-bottom">
+                        <div class="left-div gallery">
+                            <div class="left1"><img src="Images/Urus-performante/performante1.jpg" /></div>
+                            <div class="left2"><img src="Images/Urus-performante/performante2.jpg" /></div>
+                            <div class="left3"><img src="Images/Urus-performante/performante3.jpg" /></div>
+                            <div class="left4"><img src="Images/Urus-performante/performante4.jpeg" /></div>
+                        </div>
+                        <div class="second-div gallery">
+                            <div class="middle-div-pad">
+                                <div class="middle-div"><img src="Images/Urus-performante/performante5.jpg" /></div>
+                            </div>
+                            <div class="right-div">
+                                <div class="right1"><img src="Images/Urus-performante/performante6.jpg" /></div>
+                                <div class="right2"><img src="Images/Urus-performante/performante7.jpg" /></div>
+                                <div class="right3"><img src="Images/Urus-performante/performante8.jpg" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="popup-img">
+        <span class="close-btn">&times;</span>
+        <img class="popup-image" src="" />
+    </div>
+
+    <!--FOOTER-->
+    <footer>
+        <div>
+            <h2>All rights reserve. Lamborghini. 2023</h2>
+        </div>
+    </footer>
+
+    <!--attaching external javascript-->
+    <script src="JavaScript.js"></script>
+
+</body>
+</html>

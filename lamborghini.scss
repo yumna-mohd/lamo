@@ -1,0 +1,1119 @@
+﻿
+
+//declaring a variable for the grey color
+$grey-color: #c4c4c4;
+
+//--------------------------------------mixins---------------------------------------
+
+// mixin for tablets
+@mixin tablet {
+    @media screen and (min-width: 481px) and (max-width: 1024px) {
+        @content;
+    }
+}
+
+// mixin for phones
+@mixin phone {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+//mixin for center aligning
+@mixin aling_center {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+//mixin for setting background image
+@mixin bg($image) {
+    background-image: $image;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+//mixin for setting display to flex and including the flex-direction as parameter
+@mixin flex($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+//mixin for border. setting border weight, color and radius as parameters
+@mixin border($weight, $border-color, $border-radius) {
+    border: $weight solid $border-color;
+    border-radius: $border-radius;
+}
+
+//mixin for car backgrounds
+@mixin car-bg ($url) {
+    //calling mixin to set the background image with no reapeat and cover property
+    @include bg($url);
+    height: 30vw;
+    width: 100%;
+    display: flex;
+    //calling mixin for center aligning
+    @include aling_center;
+}
+
+//using external font for the "lamborghini" heading
+@font-face {
+    font-family: "La Macchina";
+    src: url('Fonts/La Macchina.ttf')
+}
+
+//general styling for the body
+body {
+    margin: 0;
+    padding: 0;
+    color: $grey-color;
+    background-color: black;
+    font-family: "georgia pro" serif;
+    font-style: italic;
+    font-weight: 100;
+    //@include bg(url('Images/black bg.png'));
+    overflow-x: hidden;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+//header
+.header {
+    //calling mixin to set display to flex
+    @include flex(row);
+    background-color: black;
+    padding: 2% 6%;
+
+    @include tablet {
+        //calling mixins for flex direction and center alignment
+        @include flex(column);
+        @include aling_center;
+    }
+
+    @include phone {
+        padding-top: 5%;
+    }
+    //includes style for title and hamburger
+    .mobile-div {
+        @include flex(row);
+        width: 90%;
+        //tablet
+        @include tablet {
+            @include flex(column);
+
+            > div {
+                @include aling_center;
+            }
+        }
+        //phone
+        @include phone {
+            @include flex(row);
+            width: 100%;
+            justify-content: space-between;
+
+            > div {
+                text-align: center;
+
+                img {
+                    width: 8vw;
+                }
+            }
+        }
+
+        .title {
+            //set flex direction
+            @include flex(row);
+            //tablet
+            @include tablet {
+                @include aling_center;
+                @include flex(column);
+            }
+            //phone
+            @include phone {
+                @include flex(row);
+            }
+            //lamborghini icon
+            img {
+                width: 6vw;
+
+                @include tablet {
+                    width: 8vw;
+                }
+            }
+            //styling the navigation "name" for the title "lamborghini"
+            .nav-name {
+                h1 {
+                    margin: 0;
+                    font-family: "La Macchina", italic;
+                    font-size: 4.2vw;
+
+                    @include phone {
+                        font-size: 6.8vw;
+                    }
+                }
+            }
+        }
+        //hamburger icon
+        .hamburger {
+            display: none;
+
+            @include phone {
+                display: block;
+                font-size: 5.8vw;
+                width: 10%;
+            }
+        }
+    }
+    //includes style for navigation
+    .sub-nav {
+        @include flex(row);
+        width: 70%;
+        height: 10%;
+        justify-content: right;
+        margin-top: 1%;
+        //tablet
+        @include tablet {
+            @include aling_center;
+        }
+        //phone
+        @include phone {
+            display: none;
+        }
+
+        > div {
+            width: 15%;
+            margin: 0.329vw 1.317vw;
+            font-size: 1vw;
+            //tablet
+            @include tablet {
+                font-size: 1.5vw;
+                margin-top: 10px;
+            }
+            //navigation
+            a {
+                text-decoration: none;
+                font-size: 1.5vw;
+                color: $grey-color;
+                -webkit-text-stroke: 0.4px green;
+                transition: font-size 0.3s;
+            }
+
+            a:hover {
+                color: darkgreen;
+                font-size: 1.6vw;
+            }
+            // Add active navigation styling for each navigation button
+        }
+        //styling the navigation button "shop"
+        .nav-shop {
+            text-align: center;
+
+            a {
+                @include border(2px, $grey-color, 20px);
+                font-weight: 100;
+                font-size: 1.3vw;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+//cover gif
+.bg-gif {
+    height: 40vw;
+    width: 100%;
+    margin-bottom: 4%;
+    //calling mixin to set the background image with no reapeat and cover property
+    @include bg(url('Images/lamborghini gif2.gif'));
+}
+// downward arrow
+.downward-arrow {
+    margin-top: 30vw;
+    font-size: 4vw;
+    font-weight: 100;
+    margin-left: 3%;
+}
+
+
+//choose model heading
+.choose-model-head {
+    display: flex;
+    //calling mixin for center aligning
+    @include aling_center;
+    font-size: 2vw;
+
+    @include phone {
+        font-size: 4vw;
+    }
+}
+
+//multiple button
+.multi-button-container {
+    //calling mixin to set display to flex
+    @include flex(column);
+    //background for the model options
+    .model-bg {
+        background: linear-gradient(180deg, rgba(0,0,0,1) 6%, rgba(28,60,7,0.8996848739495799) 27%, rgba(255,255,255,0) 100%);
+        height: 25vw;
+        width: 100%;
+        //calling mixin for center aligning
+        @include aling_center;
+        //calling mixin to set display to flex
+        @include flex(row);
+
+        @include tablet {
+            @include flex(column);
+            height: 60vw;
+            @include aling_center;
+        }
+
+        @include phone {
+            @include flex(column);
+            height: 150vw;
+        }
+        //the third model button
+        .third-button {
+            @include border(0.5px, $grey-color, 2%);
+
+            img {
+                width: 100%;
+                height: 100%;
+                filter: brightness(60%);
+            }
+            //tablet
+            @include tablet {
+                margin-top: 4vw;
+                width: 70%;
+            }
+        }
+        //first two model buttons
+        .two-buttons {
+            @include aling_center;
+            @include flex(row);
+            width: 55%;
+            justify-content: left;
+            //tablet
+            @include tablet {
+                width: 65%;
+            }
+            //phone
+            @include phone {
+                @include flex(column);
+                height: 93vw;
+            }
+
+            > div {
+                height: 16vw;
+                @include border(0.5px, $grey-color, 2%);
+                @include aling_center;
+
+                @include phone {
+                    height: 40vw;
+                    margin-bottom: 5%;
+                }
+
+                img {
+                    filter: brightness(70%);
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &:first-child {
+                    margin-right: 7.5%; /* Remove the left margin of the first container */
+                    @include phone {
+                        margin: 0 0 12% 0;
+                    }
+                }
+            }
+        }
+        //container for the buttons in 3 model images
+        .contain {
+            position: relative;
+            width: 23.371vw;
+            text-align: center;
+            color: white;
+            //tablet
+            @include tablet {
+                width: 65vw;
+                height: 30vw;
+            }
+            //phone
+            @include phone {
+                width: 65vw;
+                height: 40vw;
+            }
+            //model buttons
+            button {
+                padding: 0.527vw;
+                width: 16.458vw;
+                height: 3.292vw;
+                margin: 2%;
+                margin-top: 0.658vw;
+                font-size: 1vw;
+                //calling mixin to set the border, border-color and radius
+                @include border(2px, white, 5px);
+                background-color: rgba(0, 0, 0, 0.6);
+                color: white;
+                cursor: pointer;
+                transition: 0.3s ease-out;
+                //phone
+                @include phone {
+                    width: 30vw;
+                    height: 6vw;
+                    font-size: 3vw;
+                }
+                //tablet
+                @include tablet {
+                    font-size: 2vw;
+                }
+            }
+            //hover effect on button
+            button:hover, button:focus {
+                color: white;
+                outline: 0;
+            }
+            //adding hovering effect on the button
+            .effect {
+                border-color: $grey-color;
+                color: #ffffff;
+                box-shadow: 0 0 40px 40px color inset, 0 0 0 0 $grey-color;
+                -webkit-transition: all 150ms ease-in-out;
+                transition: all 150ms ease-in-out;
+            }
+            //adding shadow hover effect of the button
+            .effect:hover {
+                box-shadow: 0 0 10px 0 $grey-color inset, 0 0 10px 4px $grey-color;
+            }
+            //model images
+            img {
+                display: block;
+                transition: transform 0.5s;
+                border-radius: 2%;
+                //tablet
+                @include tablet {
+                    height: 100%;
+                }
+                //phone
+                @include phone {
+                    height: 100%;
+                }
+            }
+            //styling the shaded area div
+            div {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                background-color: transparent;
+                //text when hovered
+                h2 {
+                    margin-bottom: 0.658vw;
+                    font-size: 3vw;
+                    //tablet
+                    @include tablet {
+                        font-size: 4vw;
+                    }
+                    //phone
+                    @include phone {
+                        font-size: 5vw;
+                    }
+                }
+            }
+        }
+        //hover effect on the model images in the contain
+        .contain:hover img {
+            transform: scale(1.1);
+            border: 2px solid #c4c4c4;
+            filter: brightness(90%);
+        }
+        //hover effect on the div in the contain
+        .contain:hover div {
+            opacity: 1;
+            transition: ease-in 0.3s;
+        }
+    }
+}
+
+//classes to hide and show text of models
+.text {
+    display: none;
+    width: 100%;
+}
+
+.show {
+    display: block;
+}
+
+//classes to the hide and show text of huracan series
+.hidden-content {
+    display: none;
+}
+
+.show-content {
+    display: block;
+}
+
+//classes to the hide and show text of Urus series
+.hidden-content-urus {
+    display: none;
+}
+
+.show-content-urus {
+    display: block;
+}
+
+//intro para of revuelto
+.model-into {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 2%;
+    text-align: center;
+    margin-top: 3%;
+    font-size: 1vw;
+
+    @include tablet {
+        width: 80%;
+        text-align: left;
+        margin-top: 0;
+
+        h2 {
+            text-align: center;
+            font-size: 3vw;
+        }
+
+        h3 {
+            font-size: 1.8vw;
+        }
+    }
+
+    @include phone {
+        width: 80%;
+        text-align: left;
+        margin-top: 0;
+
+        h2 {
+            text-align: center;
+            font-size: 4vw;
+        }
+
+        h3 {
+            font-size: 2.6vw;
+        }
+    }
+}
+
+//revuelto model section
+.revuelto-bg {
+    //calling mixin to set and style the background image
+    @include car-bg (url('Images/lambo rev.png'));
+}
+
+//dragable spec container for revuelto
+
+//main container that contains all the slides
+.drag_container {
+    position: relative;
+    width: 62vw;
+    height: 27vw;
+    overflow: hidden;
+    cursor: grab;
+    margin: 0 auto;
+    //tablet
+    @include tablet {
+        height: 33vw;
+    }
+    //phone
+    @include phone {
+        height: 52vw;
+    }
+    //styling all the slides at once
+    .drag_slides {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: grid;
+        grid-template-columns: repeat(6, 20vw);
+        grid-gap: 2vw;
+        pointer-events: none;
+        height: 27vw;
+
+        @include tablet {
+            grid-template-columns: repeat(6, 30vw);
+            height: 33vw;
+        }
+
+        @include phone {
+            grid-template-columns: repeat(6, 50vw);
+            height: 52vw;
+        }
+        //individual slides
+        .drag_slide {
+            border-radius: 10px;
+            width: 20vw;
+
+            @include tablet {
+                width: 30vw;
+            }
+
+            @include phone {
+                width: 50vw;
+            }
+        }
+    }
+}
+
+
+
+//styles the subheading of each slide
+.drag-subhead {
+    //calling mixin to set the border, border-color and radius
+    @include border(0.5px, $grey-color, 5px);
+    width: 10vw;
+    padding: 0.658vw;
+    margin-top: 5vw;
+    //tablet
+    @include tablet {
+        width: 14vw;
+    }
+    //phone
+    @include phone {
+        width: 18vw;
+    }
+
+    h3 {
+        margin: 0;
+        font-size: 1.5vw;
+        //tablet
+        @include tablet {
+            font-size: 2vw;
+        }
+        //phone
+        @include phone {
+            font-size: 3vw;
+        }
+    }
+}
+//styling the text para in each slide
+.details-height {
+    margin-top: 1.317;
+
+    h4 {
+        border: 0.5px solid #c4c4c4;
+        border-radius: 2px;
+        padding: 0.658vw;
+        font-size: 1vw
+    }
+    //tablet
+    @include tablet {
+        h4 {
+            font-size: 1.5vw;
+        }
+    }
+    //phone
+    @include phone {
+
+        h4 {
+            font-size: 2.5vw;
+        }
+    }
+}
+
+
+//gallery
+
+//gallery heading
+.gallery-head {
+    display: flex;
+    //calling mixin for center aligning
+    @include aling_center;
+
+    h2 {
+        margin: 4% 0 0 0;
+        //tablet
+        @include tablet {
+            margin-top: 4vw;
+            font-size: 3vw;
+        }
+        //phone
+        @include phone {
+            font-size: 4vw;
+        }
+    }
+
+    h3 {
+        margin: 1% 0 5% 0;
+        //tablet
+        @include tablet {
+            font-size: 2vw;
+        }
+        //phone
+        @include phone {
+            font-size: 3vw;
+        }
+    }
+}
+
+//main gallery container
+
+.gallery-main {
+    width: 100%;
+    //calling mixin to set display to flex
+    @include aling_center;
+    @include flex(row);
+    //tablet
+    @include tablet {
+        @include flex(column);
+    }
+    //phone
+    @include phone {
+        @include flex(column);
+    }
+    //first gallery container
+    .left-div {
+        display: flex;
+        flex-wrap: wrap;
+        width: 40%;
+        padding: 0.329vw 0 0.329vw 0.329vw;
+        margin: 0;
+        @include aling_center;
+
+        @include tablet {
+            width: 90%;
+            padding: 0;
+        }
+
+        @include phone {
+            width: 90%;
+        }
+
+        > div {
+            margin: 0.329vw 0.329vw;
+            height: 10vw;
+            //tablet
+            @include tablet {
+                height: 25vw;
+            }
+            //phone
+            @include phone {
+                height: 25vw;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        //individual images
+        .left1 {
+            width: 72%;
+            border: 0.1px solid white;
+        }
+
+        .left2 {
+            width: 23%;
+            border: 0.1px solid white;
+        }
+
+        .left3 {
+            width: 23%;
+            border: 0.1px solid white;
+        }
+
+        .left4 {
+            width: 72%;
+            border: 0.1px solid white;
+        }
+    }
+    //second gallery container
+    .second-div {
+        //calling mixin to set display to flex
+        @include flex(row);
+        @include aling_center;
+        width: 42vw;
+        padding: 0.329vw 0.329vw 0.329vw 0px;
+        margin: 0;
+
+
+        @include tablet {
+            width: 90%;
+            margin-left: 3vw;
+        }
+
+        @include phone {
+            width: 90%;
+            margin-left: 3vw;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        //right most container
+        .right-div {
+            display: flex;
+            flex-wrap: wrap;
+            width: 50%;
+
+            > div {
+                margin: 0.329vw 0.329vw;
+                height: 10vw;
+
+                @include tablet {
+                    height: 25vw;
+                }
+
+                @include phone {
+                    height: 25vw;
+                }
+            }
+            //individual images
+            .right1 {
+                width: 92%;
+                border: 0.1px solid white;
+            }
+
+            .right2 {
+                width: 45%;
+                border: 0.1px solid white;
+            }
+
+            .right3 {
+                width: 45%;
+                border: 0.1px solid white;
+            }
+        }
+        //middle container
+        .middle-div-pad {
+            display: flex;
+            flex-wrap: wrap;
+            width: 50%;
+
+            .middle-div {
+                margin: 0.329vw 0.329vw;
+                height: 21vw;
+                width: 100%;
+                border: 0.1px solid white;
+
+                @include tablet {
+                    height: 50vw;
+                }
+
+                @include phone {
+                    height: 50vw;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+//huracan section
+.huracan-bg {
+    //calling mixin to set and style the background image
+    @include car-bg (url('Images/huracan02.jpg'));
+}
+
+.choose-huracan-bg {
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(95,93,98,0.7120098039215687) 50%, rgba(0,0,0,1) 100%);
+}
+//choose huracan heading
+.choose-huracan-head {
+    font-size: 2vw;
+    display: flex;
+    //calling mixin for center aligning
+    @include aling_center;
+
+    @include phone {
+        font-size: 4vw;
+    }
+}
+
+//buttons (types of huracans)
+.huracan-buttons {
+    //calling mixin to set display to flex
+    @include flex(row);
+    width: 100%;
+    //calling mixin for center aligning
+    @include aling_center;
+    //phone
+    @include phone {
+        @include flex(column);
+    }
+    //huracan buttons
+    button {
+        width: 15vw;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 4% 4%;
+        margin: 0.132vw 0.329vw 1.317vw 0.329vw;
+        font-size: 1vw;
+        //calling mixin to set the border, border-color and radius
+        @include border(0.5px, white, 5px);
+        //tablet
+        @include tablet {
+            width: 20vw;
+            font-size: 1.5vw;
+        }
+        //phone
+        @include phone {
+            width: 45vw;
+            font-size: 2.5vw;
+        }
+    }
+
+    button:hover, button:focus {
+        color: white;
+        outline: 0;
+    }
+    //adding hovering effect on the button
+    .effect {
+        border-color: $grey-color;
+        color: #ffffff;
+        box-shadow: 0 0 40px 40px color inset, 0 0 0 0 $grey-color;
+        -webkit-transition: all 150ms ease-in-out;
+        transition: all 150ms ease-in-out;
+    }
+
+    .effect:hover {
+        box-shadow: 0 0 10px 0 $grey-color inset, 0 0 10px 4px $grey-color;
+    }
+}
+
+//huracan sto background
+.huracan-sto-bg {
+    //calling mixin to set and style the background image
+    @include car-bg (url('Images/huracan stoo.png'));
+}
+
+//huracan sto heading
+.huracan-sto-head {
+    text-align: center;
+    padding: 6px;
+    width: 30vw;
+    //calling mixin to set the border, border-color and radius
+    @include border(0px, white, 5px);
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    transition: 0.3s ease-out;
+    margin: auto;
+
+    h2 {
+        font-size: 4vw;
+        color: #c4c4c4;
+        margin: 0;
+    }
+}
+
+//main specs container (containing 4 columns for specs)
+
+.main-specs-container {
+    //calling mixin to set display to flex
+    @include flex(row);
+    //calling mixin for center aligning
+    @include aling_center;
+    text-align: left;
+    width: 100%;
+    //tablet
+    @include tablet {
+        @include flex(column);
+    }
+    //phone
+    @include phone {
+        @include flex(column);
+    }
+    //contains two specs column
+    .sub-specs-container {
+        //calling mixin to set display to flex
+        @include flex(row);
+        width: 40%;
+        //tablet
+        @include tablet {
+            width: 70%;
+        }
+        //phone
+        @include phone {
+            @include flex(column);
+            width: 80%;
+        }
+        //each spec column
+        .spec-container {
+            width: 45%;
+            margin: 2.5%;
+            //phone
+            @include phone {
+                width: 100%;
+            }
+
+            .specs-height {
+                //calling mixin to set the border, border-color and radius
+                @include border(0.5px, $grey-color, 2px);
+                height: 22vw;
+                margin-top: 1.317vw;
+                padding: 0.658vw;
+                //phone
+                @include phone {
+                    height: 28vw;
+                }
+
+                h4 {
+                    font-size: 1vw;
+                    //tablet
+                    @include tablet {
+                        font-size: 1.5vw;
+                    }
+                    //phone
+                    @include phone {
+                        font-size: 2.5vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//huracan sterrato background
+.huracan-sterrato-bg {
+    //calling mixin to set and style the background image
+    @include car-bg (url('Images/huracan sterrato.png'));
+}
+//huracan technica background
+.huracan-tecnica-bg {
+    //calling mixin to set and style the background image
+    @include car-bg (url('Images/Huracan-Tecnica/huracan tecnica.png'));
+}
+
+//urus section
+.urus-bg {
+    //calling mixin to set and style the background image
+    @include car-bg (url('Images/Urus-s/urus bg.png'));
+}
+
+.urus-s-bg {
+    //calling mixin to set and style the background image
+    @include car-bg (url('Images/Urus-s/urus s bgg.png'));
+}
+
+.urus-performante-bg {
+    //calling mixin to set and style the background image
+    @include car-bg (url('Images/Urus-performante/performantee.png'));
+}
+
+//revuelto gradient colors
+.revuelto-gradient-top {
+    background: linear-gradient(180deg, rgba(189,95,34,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.revuelto-gradient-bottom {
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(189,95,34,1) 100%);
+}
+
+
+//hurican sto gradient color
+.hurican-sto-gradient-top {
+    background: linear-gradient(180deg, rgba(13,92,125,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.hurican-sto-gradient-bottom {
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(13,92,125,1) 100%);
+}
+
+
+//hurican sterrota gradient colors
+.hurican-sterrota-gradient-top {
+    background: linear-gradient(180deg, rgba(179,159,88,0.6027661064425771) 0%, rgba(0,0,0,0) 100%);
+}
+
+.hurican-sterrota-gradient-bottom {
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(179,159,88,0.6027661064425771) 100%);
+}
+
+//hurican tecnica gradient colors
+.hurican-tecnica-gradient-top {
+    background: linear-gradient(180deg, rgba(1,129,9,0.5327380952380952) 0%, rgba(173,248,178,0) 100%);
+}
+
+.hurican-tecnica-gradient-bottom {
+    background: linear-gradient(180deg, rgba(173,248,178,0) 0%, rgba(1,129,9,0.5327380952380952) 100%);
+}
+
+//urus s gradient colors
+.urus-s-gradient-bottom {
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(85,85,85,1) 100%);
+}
+
+.urus-s-gradient-top {
+    background: linear-gradient(180deg, rgba(85,85,85,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+//urus performante gradient colors
+.urus-performante-gradient-top {
+    background: linear-gradient(180deg, rgba(193,145,1,0.5999649859943977) 0%, rgba(0,0,0,0) 100%);
+}
+
+.urus-performante-gradient-bottom {
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(193,145,1,0.5999649859943977) 100%);
+}
+
+/*image popup*/
+.gallery img {
+    cursor: pointer;
+}
+
+.popup-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 999;
+}
+
+//styling the closing button for the popped up image
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    font-size: 55px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+//setting the positioning of the poped up image
+.popup-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90vw;
+    max-height: 90vh;
+    border: 2px solid #e0e0e0;
+    border-radius: 2px;
+}
+
+
+//FOOTER
+footer {
+    margin: 2% 0;
+    text-align: center;
+    font-size: 1vw;
+
+    @include tablet {
+        font-size: 1.7vw;
+    }
+
+    @include phone {
+        font-size: 2vw;
+    }
+}
